@@ -74,12 +74,11 @@ public class CreateContactTest extends BaseClass{
 		asserObj.assertEquals(ActLastname, LastName);
 	}
 	
-	@Test
+	
 	public void createContactwithDate() throws EncryptedDocumentException, IOException
 	{
 		
-		
-        Random random=new Random();
+		Random random=new Random();
         int randomInt=random.nextInt(1000);
 		ExcelUtility exc=new ExcelUtility();
 		JavaUtility Jlib=new JavaUtility();

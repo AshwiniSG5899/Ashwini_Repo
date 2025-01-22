@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="Test1(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="com.comcast.crm.contactTest.CreateContactTest">
         <methods>
-          <include name="createContactWithOrg"/>
-          <include name="createContactwithDate"/>
           <include name="configBM"/>
           <include name="configAm"/>
-          <include name="configBS"/>
           <include name="configBC"/>
-          <include name="createConTest"/>
-          <include name="configAS"/>
+          <include name="configBS"/>
+          <include name="createContactwithDate"/>
           <include name="configAC"/>
+          <include name="configAS"/>
         </methods>
       </class> <!-- com.comcast.crm.contactTest.CreateContactTest -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
