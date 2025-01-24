@@ -24,8 +24,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+
 import com.comcast.crm.ListenerUtility.ListImpClass;
 import com.comcast.crm.ObjectRepositoryUtility.ContactsPage;
 import com.comcast.crm.ObjectRepositoryUtility.CreateNewContactPage;
@@ -44,7 +43,7 @@ public class CreateContactTest extends BaseClass{
 	
 	@Test(groups = "smokeTest")
 	public void createConTest() throws EncryptedDocumentException, IOException{
-		UtilityClassObject.getTest().log(Status.INFO, "reading data from excel");
+		//UtilityClassObject.getTest().log(Status.INFO, "reading data from excel");
 		FileInputStream fis1=new FileInputStream("C:\\Users\\QSP-Ashtra\\Downloads\\TestScriptData1.xlsx");
         Random random=new Random();
         int randomInt=random.nextInt(1000);
@@ -54,13 +53,13 @@ public class CreateContactTest extends BaseClass{
 		 
 		String LastName=row.getCell(2).toString()+randomInt;
 		wb.close();
-		UtilityClassObject.getTest().log(Status.INFO, "navigate to contact page");
+		//UtilityClassObject.getTest().log(Status.INFO, "navigate to contact page");
 		HomePage hp=new HomePage(driver);
 		hp.getContactLink().click();
-		UtilityClassObject.getTest().log(Status.INFO, "navigate to create contact page");
+		//UtilityClassObject.getTest().log(Status.INFO, "navigate to create contact page");
         ContactsPage ctp=new ContactsPage(driver);
         ctp.getCreateContactBtn().click();
-        UtilityClassObject.getTest().log(Status.INFO, "create a contact");
+        //UtilityClassObject.getTest().log(Status.INFO, "create a contact");
 		CreateNewContactPage ccp=new CreateNewContactPage(driver);
 		ccp.createContact(LastName);
 		

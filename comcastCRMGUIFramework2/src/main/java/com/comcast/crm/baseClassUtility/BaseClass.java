@@ -15,9 +15,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+
 import com.comcast.crm.ObjectRepositoryUtility.HomePage;
 import com.comcast.crm.ObjectRepositoryUtility.LoginPage;
 import com.comcast.crm.ObjectRepositoryUtility.OrganizationsPage;
@@ -38,8 +36,7 @@ public class BaseClass {
 	
 	public WebDriver driver=null;
 	public static WebDriver sdriver=null;
-	ExtentReports report=null;
-	ExtentSparkReporter spark=null;
+	
 	
 	@BeforeSuite(groups = {"smokeTest","regressionTest"})
 	public void configBS()
@@ -74,7 +71,7 @@ public class BaseClass {
 			driver=new ChromeDriver();
 		}
 		sdriver=driver;
-		UtilityClassObject.setDriver(driver);
+		//UtilityClassObject.setDriver(driver);
 	}
 	@BeforeMethod(groups = {"smokeTest","regressionTest"})
 	public void configBM() throws Throwable
